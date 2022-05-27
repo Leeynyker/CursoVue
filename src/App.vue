@@ -13,7 +13,7 @@ export default {
   data() {
     return {
       mensaje: "vue",
-      texto: 'Hola mundo',
+      texto: 'Holamundo',
       textoHtml: '<a href="https://google.com"> Otra frase </a>',
       inputText: " Escribe un texto",
       img: "https://picsum.photos/300/300",
