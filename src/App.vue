@@ -1,30 +1,33 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <div class="">
+    <h1>   {{inputText}} </h1>
+    <h2 :class="clasePruebas" v-text="texto"></h2>
+    <p v-html="textoHtml"></p>
+    <input type="text" v-model="inputText">
+    <img :src="img" alt="">
+  </div>
 </template>
-
+<script>
+export default {
+  name: "App",
+  data() {
+    return {
+      mensaje: "vue",
+      texto: 'Hola mundo',
+      textoHtml: '<a href="https://google.com"> Otra frase </a>',
+      inputText: " Escribe un texto",
+      img: "https://picsum.photos/300/300",
+      clasePruebas: "texto-rojo",
+    }
+  },
+}
+</script>
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+.texto-azul{
+  color: blue;
 }
-
-nav {
-  padding: 30px;
-}
-
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
+.texto-rojo{
+  color: red;
+  background-color: black;
 }
 </style>
